@@ -273,11 +273,11 @@ function frontUI() {
 
     if (hour >= 6 && hour < 12) {
       wallpaper.style.backgroundImage =
+        "url('https://images.unsplash.com/photo-1748415695958-307f1cfd159d?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
+    } else if (hour >= 12 && hour < 16) {
+      wallpaper.style.backgroundImage =
         "url('https://images.unsplash.com/photo-1600262912274-28f333fa17bd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
     } else if (hour >= 16 && hour < 20) {
-      wallpaper.style.backgroundImage =
-        "url('https://images.unsplash.com/photo-1748415695958-307f1cfd159d?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
-    } else if (hour > 12 && hour < 16) {
       wallpaper.style.backgroundImage =
         "url('https://static.vecteezy.com/system/resources/previews/053/247/637/non_2x/background-clouds-against-the-blue-sky-and-sun-background-of-nature-free-photo.jpg')";
     } else {
