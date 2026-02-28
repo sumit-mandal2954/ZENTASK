@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Icons/favicon-32x32.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Productivity Dashboard</title>
+</head>
+
+<body>
+    <main>
+        <section class="allElems">
+            <nav>
+                <div class="nav-in">
+                    <h1>Productivity DashBoard</h1>
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </nav>
+            <header>
+                <div class="header1">
+                    <h1>19 Feb,2025</h1>
+                    <h2>Thursday, 23:00 am</h2>
+                    <h4>Bhopal (MP)</h4>
+                </div>
+
+                <div class="header2">
+                    <h1>22°C</h1>
+                    <h2>Mostly sunny</h2>
+                    <h3 class="pressure">Pressure: 0 pascal </h3>
+                    <h3 class="humidity">Humidity: 42%</h3>
+                    <h3 class="wind">Wind: 16 km/h</h3>
+                </div>
+            </header>
+            <div class="allFeatures">
+                <div id="0" class="elem ">
+                    <img class="todo" src="https://images.unsplash.com/photo-1662027008658-b615840c7deb?q=80&w=1162&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h1>To Do List</h1>
+                </div>
+                <div id="1" class="elem ">
+                    <img class="planner" src="https://plus.unsplash.com/premium_photo-1677109899391-f661ac45d798?q=80&w=720&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h1>Daily Planner</h1>
+                </div>
+                <div id="2" class="elem ">
+                    <img class="motivation" src="https://plus.unsplash.com/premium_photo-1685885584657-f1a5d2af5d99?q=80&w=761&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h1>Motivation</h1>
+                </div>
+                <div id="3" class="elem ">
+                    <img class="pomo" src="https://images.unsplash.com/photo-1718803597223-f7beeb310d3b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h1>pomodoro Timer</h1>
+                </div>
+                <div id="4" class="elem ">
+                    <img class="goals" src="https://plus.unsplash.com/premium_photo-1700675175397-7cc710d56e11?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <h1>Daily Goals</h1>
+                </div>
+            </div>
+        </section>
+        <section class="fullElem todo-container-fullPage">
+            <button id="0" class="back">Close</button>
+            <h2>Your personalised Task List</h2>
+            <div class="todo-container">
+                <div class="add-task">
+                    <form id="todoForm">
+                        <input id="task-input" type="text" required placeholder="Write task..">
+                        <textarea placeholder="Enter details" required id="detail"></textarea>
+                        <div class="mark-imp">
+                            <input type="checkbox" name="" id="checkbox">
+                            <label for="checkbox">Mark as Important</label>
+                        </div>
+                        <button>Add task</button>
+                    </form>
+                </div>
+                <div class="task-list">
+                </div>
+            </div>
+        </section>
+        <section class="fullElem DailyPlaneer-fullPage">
+            <button id="1" class="back">Close</button>
+            <h3>Daily Planner</h3>
+            <div class="daily_planTime">
+            </div>
+        </section>
+        <section class="fullElem Motivation-fullPage">
+            <button id="2" class="back">Close</button>
+            <div class="MotivationalpageDetail">
+                <div class="motivation-container">
+                    <div class="motivations">
+                        <div class="heading">
+                            <h1>Motivation of the day</h1>
+                        </div>
+                        <div class="Quotes">
+                            <p></p>
+                        </div>
+                        <div class="author">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fullElem pomodoro-timer-fullPage">
+            <h1>Focus Mode</h1>
+            <button id="3" class="back">Close</button>
+            <div class="session">Work Session</div>
+            <div class="pomo-timer">
+                <h2>25:00</h2>
+                <button class="start">Start</button>
+                <button class="pause">Pause</button>
+                <button class="reset">Reset</button>
+            </div>
+        </section>
+        <section class="fullElem Daily-Goal-FullPage">
+            <h1>Daily Goals</h1>
+            <button id="4" class="back">Close</button>
+
+            <div class="goalInputBox">
+                <input type="text" id="goalInput" placeholder="Enter your goal...">
+                <button id="addGoal">Add</button>
+            </div>
+
+            <div class="goalList"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

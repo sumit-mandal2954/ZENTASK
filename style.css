@@ -1,0 +1,577 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+:root {
+  --primary: rgb(84, 41, 41);
+  --secondary: rgb(125, 72, 72);
+  --seconday2: rgb(189, 147, 147);
+  --tri: rgb(241, 241, 113);
+  --close-btn: rgb(255, 90, 90);
+  --complete: rgb(91, 233, 91);
+  --adding-btn: rgb(79, 205, 255);
+  --text-color: rgba(144, 209, 247, 0.618);
+  --work: #10192e;
+  --break: #16a34a;
+  --white: white;
+  --toggle: #4f46e5;
+  --deepwhite: #d8d5d1;
+}
+section.allElems {
+  width: 100vw;
+  padding: 2rem;
+  background-color: var(--primary);
+  position: absolute;
+}
+.allElems header {
+  width: 100%;
+  background-color: var(--seconday2);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-image: url(https://images.unsplash.com/photo-1748415695958-307f1cfd159d?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  color: bl;
+}
+.allElems nav {
+  background-color: var(--seconday2);
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 0.5rem;
+}
+.allElems nav .nav-in {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.allElems nav .nav-in h1 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--deepwhite);
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "🌙";
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  font-size: 14px;
+}
+
+/* Checked (Dark Mode ON) */
+input:checked + .slider {
+  background-color: var(--toggle);
+}
+
+input:checked + .slider:before {
+  transform: translateX(28px);
+  content: "☀️";
+}
+.allElems nav .nav-in i:active {
+  scale: 0.95;
+}
+header .header1 h2 {
+  font-size: 4rem;
+}
+header .header1 h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+header .header1 h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+header .header2 h1 {
+  font-size: 3rem;
+}
+
+header .header2 h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+header .header2 h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+header .header2 .Precipitation {
+  margin-top: 1rem;
+}
+.allElems .allFeatures {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  transition: all 0.5ms ease;
+}
+.allElems .elem {
+  height: 300px;
+  width: 250px;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.allElems .elem:active {
+  scale: 0.97;
+}
+.allElems .elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.allElems .elem h1 {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  color: var(--deepwhite);
+}
+main section.fullElem {
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  font-size: 2rem;
+  background-color: var(--primary);
+  display: none;
+  position: absolute;
+}
+
+.fullElem .back {
+  padding: 5px 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: var(--close-btn);
+  color: var(--deepwhite);
+  transition: all 0.3s ease;
+}
+.back:active {
+  scale: 0.97;
+}
+.todo-container-fullPage h2 {
+  text-align: center;
+  padding: 1rem;
+  color: var(--deepwhite);
+}
+.todo-container-fullPage .todo-container {
+  max-width: 90%;
+  width: 90%;
+  height: 80%;
+  margin: auto;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.todo-container-fullPage .todo-container .add-task {
+  height: 100%;
+  width: 35%;
+  background-color: var(--secondary);
+  border-radius: 0.5rem;
+}
+.todo-container-fullPage .todo-container .task-list {
+  height: 100%;
+  width: 60%;
+  background-color: var(--secondary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: auto;
+}
+
+.todo-container-fullPage .todo-container .add-task form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: var(--deepwhite);
+}
+.todo-container-fullPage .todo-container .add-task form input#task-input {
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: var(--deepwhite);
+}
+.todo-container-fullPage .todo-container .add-task form textarea {
+  height: 200px;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: var(--deepwhite);
+}
+.todo-container-fullPage .todo-container .add-task form button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--adding-btn);
+}
+
+.todo-container-fullPage .todo-container .task-list .task {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: var(--tri);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+.task-list .task h5 {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  font-size: 1.5rem;
+}
+.task-list .task .complete-btn {
+  transition: all ease 0.5s;
+}
+.task-list .task .complete-btn:active {
+  scale: 0.95;
+}
+.task-list .task span.true {
+  background-color: red;
+  color: var(--primary);
+  padding: 2px 5px;
+  border-radius: 1rem;
+  font-size: 0.6rem;
+}
+.task-list .task span.false {
+  opacity: 0;
+}
+.todo-container-fullPage .todo-container .task-list .task button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--complete);
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.todo-container-fullPage .todo-container .add-task form .mark-imp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+  gap: 1rem;
+  width: 100%;
+  color: var(--deepwhite);
+}
+
+.DailyPlaneer-fullPage .daily_planTime {
+  width: 80%;
+  height: 90%;
+  margin: auto;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: auto;
+  background-color: var(--seconday2);
+}
+.DailyPlaneer-fullPage .daily_planTime::-webkit-scrollbar{
+  display: none;
+}
+.DailyPlaneer-fullPage h3{
+  color: var(--deepwhite);
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  padding: 1rem;
+  font-size: 3rem;
+}
+.DailyPlaneer-fullPage .daily_planTime .dayPlanner {
+  display: flex;
+  align-items: center;
+  width: 49%;
+  position: relative;
+  background-color: var(--deepwhite);
+  border-radius: 0.5rem;
+}
+.DailyPlaneer-fullPage .daily_planTime .dayPlanner input {
+  width: 100%;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  padding-top: 25px;
+  background-color: var(--deepwhite);
+}
+.DailyPlaneer-fullPage .daily_planTime .dayPlanner p {
+  font-size: 1rem;
+  position: absolute;
+  left: 2%;
+  top: 10%;
+}
+
+.MotivationalpageDetail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.motivation-container {
+  width: 60%;
+  height: 70%;
+  background: rgba(135, 206, 235, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 0 12px rgba(186, 85, 211, 0.6),
+    0 0 30px rgba(138, 43, 226, 0.4),
+    0 0 60px rgba(75, 0, 130, 0.25);
+
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.motivation-container .motivations {
+  width: 70%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow:
+    0 0 12px rgba(0, 255, 255, 0.7),
+    0 0 25px rgba(0, 200, 255, 0.5),
+    0 0 50px rgba(0, 150, 255, 0.3);
+
+  background-color: var(--seconday2);
+}
+.motivation-container .motivations .heading {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--secondary);
+}
+.motivation-container .motivations .heading h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  color: #1e1e1e;
+  letter-spacing: 0.5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.motivation-container .motivations .Quotes {
+  padding: 1.5rem;
+  position: relative;
+}
+.motivation-container .motivations .Quotes::before {
+  content: "❝";
+  position: absolute;
+  left: -15px;
+  top: -10px;
+  font-size: 4rem;
+  color: rgba(0, 200, 255, 0.6);
+  text-shadow: 0 0 15px rgba(0, 200, 255, 0.6);
+}
+.motivation-container .motivations .Quotes p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #102a43;
+  text-shadow:
+    0 0 6px rgba(0, 200, 255, 0.35),
+    0 0 12px rgba(0, 200, 255, 0.25);
+}
+.motivation-container .motivations .author {
+  background: rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.motivation-container .motivations .author p {
+  font-weight: 600;
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pomodoro-timer-fullPage .pomo-timer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--deepwhite);
+}
+.pomodoro-timer-fullPage .pomo-timer h2 {
+  font-size: 10rem;
+}
+.pomodoro-timer-fullPage h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: var(--deepwhite);
+}
+.pomodoro-timer-fullPage .pomo-timer button {
+  background-color: var(--secondary);
+  padding: 0.5rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 0px var(--work);
+  transition: all ease 0.5s;
+}
+
+.pomodoro-timer-fullPage .pomo-timer .start:active {
+  scale: 0.97;
+  box-shadow: 0px 0px 0px;
+}
+.pomodoro-timer-fullPage .pomo-timer .pause:active {
+  scale: 0.97;
+  box-shadow: 0px 0px 0px;
+}
+.pomodoro-timer-fullPage .pomo-timer .reset:active {
+  scale: 0.97;
+  box-shadow: 0px 0px 0px;
+}
+.pomodoro-timer-fullPage .session {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--work);
+  color: var(--deepwhite);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.Daily-Goal-FullPage {
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Daily-Goal-FullPage h1{
+  color: var(--deepwhite);
+}
+
+.goalInputBox {
+  width: 50%;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.goalInputBox input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.goalInputBox button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: var(--secondary);
+  color: var(--deepwhite);
+}
+
+.goalList {
+  width: 50%;
+  flex: 1;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.goalList::-webkit-scrollbar {
+  display: none;
+}
+
+.goalItem {
+  background: var(--secondary2);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goalItem.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.goalActions button {
+  margin-left: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+}
