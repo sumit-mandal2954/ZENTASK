@@ -1,4 +1,3 @@
-import {  API_KEY } from "./secrectKey.js";
 
 function openFeature() {
   let allWork = document.querySelectorAll(".elem");
@@ -219,7 +218,7 @@ function frontUI() {
 
   async function weather() {
     let data = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ad0a8981c3580a51581566d652efda50&units=metric`,
     );
     let response = await data.json();
     temp.innerHTML = response.main.temp;
