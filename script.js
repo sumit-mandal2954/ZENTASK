@@ -1,3 +1,5 @@
+import {  API_KEY } from "./secrectKey.js";
+
 function openFeature() {
   let allWork = document.querySelectorAll(".elem");
   let workSpace = document.querySelectorAll(".fullElem");
@@ -217,7 +219,7 @@ function frontUI() {
 
   async function weather() {
     let data = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ad0a8981c3580a51581566d652efda50&units=metric`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`,
     );
     let response = await data.json();
     temp.innerHTML = response.main.temp;
@@ -253,7 +255,6 @@ function frontUI() {
       "December",
     ];
     let data = new Date();
-    console.log(data.getMonth());
     let month = totalyearMonths[data.getMonth()];
     let year = data.getFullYear();
     let date = data.getDate();
@@ -364,7 +365,6 @@ function ThemeChange() {
   let pomoimg = document.querySelector(".allFeatures .pomo");
   let goalsimg = document.querySelector(".allFeatures .goals");
 
-  console.log(motivationimg);
   theme.addEventListener("change", function () {
     if (theme.checked) {
       document.documentElement.style.setProperty("--primary", "#222831");
